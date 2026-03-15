@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<title>15 Anos • Yasmin Soares Gaia \
+ Realeza</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#C8A96A" name="theme-color"/>
+<meta content="Celebração dos 15 anos de Yasmin Soares Gaia. Confirme presença, veja programação, local e sugestão de presente. Tema: Realeza" name="description"/>
+<!-- Fonts (pré-conexão e carregamento) -->
+<link crossorigin="" href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<!-- Cinzel (títulos), Poppins (texto) e Great Vibes (nome em caligrafia) -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Great+Vibes&amp;family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      /* Paleta vibrante e temática */
+      --vermelho:#D11E2D;     /* vermelho vibrante (topo) */
+      --vermelho-esc:#B1131E; /* vermelho médio (meio) */
+      --vermelho-prof:#7A0E16;/* vermelho profundo (base) */
+      --dourado:#C8A96A;      /* dourado quente */
+      --dourado-esc:#A58547;
+      --champagne:#F9F3EA;    /* fundo suave */
+      --grafite:#2B2B2B;
+      --branco:#ffffff;
+
+      /* Ajuste aqui se tiver header fixo (ex.: 80px) */
+      --header-height: 0px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;padding:0;
+      background:var(--champagne);color:var(--grafite);
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif
+    }
+    a{color:var(--vermelho);text-decoration:none}
+    /* Botões */
+    .btn{
+      display:inline-block;padding:12px 20px;border-radius:10px;
+      font-weight:600;cursor:pointer;transition:.2s;border:1px solid transparent
+    }
+    .btn-primary{background:var(--vermelho);color:#fff;border-color:var(--vermelho)}
+    .btn-primary:hover{filter:brightness(1.1)}
+    .btn-light{background:#fff;color:var(--vermelho);border-color:#fff}
+    .btn-outline{background:transparent;color:var(--vermelho);border-color:var(--vermelho)}
+    .btn-outline:hover{filter:brightness(0.95)}
+    .btn-whatsapp{background:#25D366;color:#fff;border-color:#25D366}
+    .btn-whatsapp:hover{filter:brightness(1.08)}
+    .container{max-width:1100px;margin:0 auto;padding:72px 16px}
+    h1,h2,h3{font-family:Cinzel,serif;color:var(--vermelho)}
+    h1{font-size:clamp(36px,5.5vw,64px);letter-spacing:.5px;margin:8px 0 10px}
+    h2{font-size:clamp(26px,4vw,40px);margin:0 0 12px}
+    p{line-height:1.6}
+    .tag{
+      display:inline-block;
+      background:linear-gradient(135deg,var(--dourado),var(--dourado-esc));
+      -webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700
+    }
+    /* === HERO (revisto: vermelho vibrante + dourado + preto leve) === */
+    header.hero{
+      min-height:100vh;display:grid;place-items:center;text-align:center;color:#fff;position:relative;overflow:hidden
+    }
+    header.hero::before{
+      content:"";position:absolute;inset:0;
+      background:
+        /* brilho dourado no topo (leve) */
+        radial-gradient(1200px 540px at 60% 12%, rgba(241,215,144,.28), rgba(241,215,144,0) 65%) ,
+        /* faixa dourada diagonal suave */
+        linear-gradient(135deg, rgba(200,169,106,.16) 10%, rgba(200,169,106,0) 40%, rgba(200,169,106,.12) 60%, rgba(200,169,106,0) 85%) ,
+        /* vinheta preta suave nas bordas para profundidade */
+        radial-gradient(120% 100% at 50% 100%, rgba(0,0,0,.28) 0%, rgba(0,0,0,.42) 70%) ,
+        /* base vermelha mais clara e vibrante (sem preto puro no gradiente base) */
+        linear-gradient(180deg, var(--vermelho) 0%, var(--vermelho-esc) 55%, var(--vermelho-prof) 100%);
+      background-blend-mode: screen, overlay, multiply, normal;
+      filter: contrast(1.03) saturate(1.08);
+    }
+    /* brilho/partículas douradas e flare suave adicional */
+    header.hero::after{
+      content:""; position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(600px 220px at 50% 7%, rgba(241,215,144,.42), rgba(241,215,144,0) 70%) ,
+        repeating-radial-gradient(circle at 30% 20%, rgba(200,169,106,.10) 0 0.8px, transparent 0.8px 2.2px);
+      mix-blend-mode: screen;
+      opacity:.55;
+    }
+    .hero-inner{position:relative;padding:64px 16px}
+    .coroa{width:68px;height:68px;margin:0 auto 14px;display:block}
+    .lead{
+      font-size:clamp(16px,2.3vw,20px);
+      max-width:800px;margin:0 auto 16px;color:#FFF5F0
+    }
+    .date-badge{
+      display:inline-block;background:rgba(255,255,255,.14);backdrop-filter:blur(3px);
+      border:1px solid rgba(255,255,255,.35); color:#fff; padding:10px 18px;border-radius:999px;font-weight:600
+    }
+    .countdown{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+    .cd-item{background:rgba(255,255,255,.9);color:var(--grafite);padding:10px 14px;border-radius:12px;min-width:78px}
+    .cd-item .num{display:block;font-weight:700;font-size:22px}
+    .cta{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    /* Cartões/Seções */
+    section.card{background:#fff;border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.08);padding:24px}
+    .grid{display:grid;gap:24px}
+    @media (min-width:900px){ .grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
+    .list{list-style:none;padding:0;margin:0}
+    .list li{margin:10px 0}
+    /* Galeria */
+    .galeria{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+    .galeria img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+    /* Rodapé */
+    footer{padding:36px 16px;text-align:center;color:#6b6b6b}
+    /* Dourado decorativo */
+    .divider{height:2px;background:linear-gradient(90deg,transparent, var(--dourado), transparent);border:0;margin:14px 0 24px}
+    /* PIX */
+    .pix-box{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0}
+    .pix-badge{background:#F3E8CF;border:1px solid var(--dourado-esc);padding:6px 10px;border-radius:8px;font-family:monospace}
+    .amount-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .amount-num{min-width:110px;display:inline-block;text-align:center;background:#fff;border:1px solid #e3d9c9;border-radius:8px;padding:8px 12px;font-weight:700}
+    .btn-ghost{background:transparent;border:1px solid #e3d9c9;border-radius:8px;padding:8px 12px;cursor:pointer}
+    /* Nome dourado vibrante + caligrafia moderna */
+    .gold-text{
+      background: linear-gradient(90deg, #F8E8A8, #C8A96A, #F8E8A8);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+      text-shadow: 0 1px 1px rgba(0,0,0,.22);
+    }
+    .name-script{
+      font-family:'Great Vibes', cursive;
+      font-weight:400;
+      font-size:clamp(44px,8vw,92px);
+      letter-spacing:.4px;
+      line-height:1.05;
+      margin:12px 0 8px;
+    }
+    /* Rolagem suave e offset das âncoras */
+    html { scroll-behavior: smooth; }
+    #sobre, #rsvp, #presentes, #programacao, #local, #galeria { scroll-margin-top: var(--header-height); }
+  
+
+/* ===== AJUSTES DE ESPAÇAMENTO ENTRE SEÇÕES E CARDS ===== */
+main.container > section { margin-top: 40px; }
+main.container > section + section { margin-top: 48px; }
+.grid { display: grid; gap: 28px; }
+@media (min-width: 900px) { .grid.grid-2 { grid-template-columns: 1fr 1fr; } }
+.grid .card { margin: 0; }
+section.card { /* opcional: margin-top: 32px; */ }
+.card h2 { margin-top: 0; margin-bottom: 10px; }
+.card .divider { margin: 14px 0 22px; }
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+main.container { padding-top: 8px; }
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="hero-inner">
+<!-- Ícone de Coroa (SVG, sem dependências) -->
+<svg aria-hidden="true" class="coroa" fill="none" viewbox="0 0 64 64">
+<path d="M7 46l5-22 12 11 8-19 8 19 12-11 5 22H7z" fill="url(#g)"></path>
+<path d="M7 46h50v6H7z" fill="url(#g)"></path>
+<defs>
+<lineargradient id="g" x1="0" x2="64" y1="0" y2="64">
+<stop offset="0" stop-color="#F1D790"></stop><stop offset="1" stop-color="#C8A96A"></stop>
+</lineargradient>
+</defs>
+</svg>
+<span class="date-badge">Celebração de 15 anos • Tema: <span class="tag">Realeza</span></span>
+<!-- NOME com caligrafia moderna + dourado -->
+<h1 class="name-script"><span class="gold-text">Yasmin Soares Gaia</span></h1>
+<p class="lead">
+      Uma noite para celebrar a história, os sonhos e o brilho de uma princesa.
+      <br/><strong>Domingo, 26/07/2026 • 18h às 23h</strong>
+</p>
+<div aria-label="Contagem regressiva para 26/07/2026 18h" class="countdown" id="countdown">
+<div class="cd-item"><span class="num" id="dd">--</span><small>Dias</small></div>
+<div class="cd-item"><span class="num" id="hh">--</span><small>Horas</small></div>
+<div class="cd-item"><span class="num" id="mm">--</span><small>Min</small></div>
+<div class="cd-item"><span class="num" id="ss">--</span><small>Seg</small></div>
+</div>
+<div id="countdownMsg" style="margin-top:8px; font-weight:600; color:#F1D790; text-shadow:0 1px 2px rgba(0,0,0,.35);"></div>
+<!-- Botões âncora -->
+<div class="cta">
+<a class="btn btn-primary" href="#sobre">Sobre a Festa</a>
+<a class="btn btn-light" href="#local">Local da Festa</a>
+<a class="btn btn-primary" href="#rsvp">Confirmar Presença</a>
+<a class="btn btn-light" href="#presentes">Sugestão de Presente</a>
+<a class="btn btn-primary" href="#galeria">Galeria de Fotos</a>
+</div>
+</div>
+</header>
+<main class="container">
+<!-- Sobre -->
+<section class="grid grid-2" id="sobre">
+<section class="card">
+<h2>Sobre a Festa</h2>
+<hr class="divider"/>
+<p>
+        Depois de tantos momentos marcantes, chegou a hora de celebrar os 15 anos da <strong>Yasmin Soares Gaia</strong>
+        com quem faz parte da sua história. Preparamos uma noite inesquecível com carinho, música e muitas surpresas.
+      </p>
+<ul class="list">
+<li><strong>Data:</strong> Domingo, 26/07/2026</li>
+<li><strong>Horário:</strong> 18h às 23h</li>
+<li><strong>Tema:</strong> Realeza • <span class="tag">Vermelho &amp; Dourado</span></li>
+</ul>
+</section>
+<section class="card">
+<h2>Traje</h2>
+<hr class="divider"/>
+<p>Para compor o clima real da noite:</p>
+<ul class="list">
+<li>👗 <strong>Mulheres:</strong> Social completo</li>
+<li>🤵 <strong>Homens:</strong> Social completo</li>
+</ul>
+<p>Será uma noite de gala, evite vestido vermelho, vamos deixar o destaque pra nossa princesa do dia ✨</p>
+</section>
+</section>
+<!-- Programação -->
+<section class="card" id="programacao">
+<h2>Programação</h2>
+<hr class="divider"/>
+<ul class="list">
+<li><strong>18:00</strong> • Recepção &amp; Boas‑vindas</li>
+<li><strong>19:00</strong> • Entrada da Debutante</li>
+<li><strong>20:00</strong> • Valsa &amp; Homenagens</li>
+<li><strong>21:00</strong> • Jantar</li>
+<li><strong>22:00</strong> • Balada Real 👑</li>
+</ul>
+</section>
+<!-- Local + Presentes -->
+<section class="grid grid-2" id="local">
+<section class="card">
+<h2>Local da Festa</h2>
+<hr class="divider"/>
+<p><strong>Buffet Mansão Ávila Garden</strong></p>
+<p>
+        Instagram do espaço:
+        <a href="https://www.instagram.com/mansaoavilagardenbuffet/" rel="noopener" target="_blank">@mansaoavilagardenbuffet</a>
+</p>
+<p style="font-size:14px;color:#666">Endereço: Av Dom Pedro I, 125, Santo André, Brazil 091110-001</p>
+<div class="cta">
+<a class="btn btn-outline" href="https://www.instagram.com/mansaoavilagardenbuffet/" rel="noopener" target="_blank">Ver no Instagram</a>
+</div>
+</section>
+<section class="card" id="presentes">
+<h2>Sugestão de Presentes</h2>
+<hr class="divider"/>
+<!-- 🔻 CONTEÚDO ATUALIZADO CONFORME SUA MENSAGEM -->
+<p>
+        A Yasmin tem um sonho muito especial: cursar <strong>Medicina</strong> e, no futuro,
+        <strong>viajar para fora do país</strong> para estudar e viver novas experiências.
+        Se desejar presenteá‑la enviando um PIX, sua contribuição será recebida com muito carinho
+        e fará parte dessa jornada. 💖
+      </p>
+<p><strong>Chave PIX:</strong></p>
+<div class="pix-box">
+<span class="pix-badge" id="pix">11976419694</span>
+<button class="btn btn-primary" onclick="copiarPix()">Copiar chave Pix</button>
+</div>
+<p style="margin-top:18px;"><strong>💛 Observação importante:</strong><br/>
+        Por favor, inclua no campo <em>“Observações”</em> do PIX <strong>o nome de quem está presenteando</strong>,
+        para que possamos enviar uma mensagem de agradecimento com muito carinho.
+      </p>
+<p style="margin-top:18px;"><strong>🎁 Caso prefira presentear com algo físico:</strong><br/>
+        • Roupas: tamanho P<br/>
+        • Calças/shorts: 36<br/>
+        • Calçados: 37<br/>
+        • Adora maquiagens e perfumes. Ama livros. 💄✨📚
+      </p>
+<p style="margin-top:18px;"><strong>Caso prefira: Clique abaixo para copiar direcionar ao QRCOD do PIX, e insira o valor que desejar:</strong></p>
+<button class="btn btn-primary" onclick="confirmarSugestao()">Copiar Qrdcod PIX</button>
+<!-- 🔺 FIM DO BLOCO ATUALIZADO -->
+</section>
+</section>
+<!-- RSVP -->
+<section class="card" id="rsvp">
+<h2>Confirmar Presença (RSVP)</h2>
+<hr class="divider"/>
+<p>Para confirmar presença, envie seu nome por e‑mail ou WhatsApp:</p>
+<div class="cta">
+<!-- E-mail -->
+<a class="btn btn-outline" href="mailto:msoares@id-logistics.com?subject=RSVP%2015%20Anos%20Yasmin%20Soares%20Gaia&amp;body=Ol%C3%A1!%20Confirmo%20minha%20presen%C3%A7a%20na%20festa%20da%20Yasmin.%0A%0ANome%3A">
+        Enviar e‑mail de confirmação
+      </a>
+<!-- WhatsApp (mensagem: só Nome:) -->
+<a class="btn btn-whatsapp" href="https://wa.me/5511976418694?text=Ol%C3%A1!%20Confirmo%20minha%20presen%C3%A7a%20na%20festa%20da%20Yasmin.%0A%0ANome%3A" rel="noopener" target="_blank">
+        Confirmar por WhatsApp
+      </a>
+</div>
+<p style="font-size:14px;color:#666">
+      Se preferir, avise por WhatsApp e registramos sua confirmação. 🙂
+    </p>
+</section>
+<!-- Galeria -->
+<section class="card" id="galeria">
+<h2>Galeria</h2>
+<hr class="divider"/>
+<div aria-label="Galeria de fotos" class="galeria">
+<img alt="Momentos especiais 1" src="https://images.unsplash.com/photo-1542037104857-ffbb0b9158e1?q=80&amp;w=800&amp;auto=format&amp;fit=crop"/>
+<img alt="Momentos especiais 2" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&amp;w=800&amp;auto=format&amp;fit=crop"/>
+<img alt="Momentos especiais 3" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&amp;w=800&amp;auto=format&amp;fit=crop"/>
+<img alt="Momentos especiais 4" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&amp;w=800&amp;auto=format&amp;fit=crop"/>
+</div>
+</section>
+</main>
+<footer>
+<p>Com carinho, família Soares • © 2026</p>
+</footer>
+<script>
+  // ====== Contagem regressiva (26/07/2026, domingo, 18:00–23:00) ======
+  function criarDataLocal(ano, mes1a12, dia, hora=0, min=0, seg=0){
+    return new Date(ano, mes1a12 - 1, dia, hora, min, seg); // mês 0‑based
+  }
+  const inicio = criarDataLocal(2026, 7, 26, 18, 0, 0);
+  const fim = criarDataLocal(2026, 7, 26, 23, 0, 0);
+  function two(n){ return n < 10 ? '0' + n : String(n); }
+  function renderCountdown(){
+    const now = new Date();
+    const msg = document.getElementById('countdownMsg');
+    const box = document.getElementById('countdown');
+    if (!box) return;
+    if (now < inicio){
+      let diff = inicio - now;
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      box.style.display = 'flex';
+      if (msg){ msg.textContent = 'Faltam para o grande dia:'; }
+      const elD = document.getElementById('dd');
+      const elH = document.getElementById('hh');
+      const elM = document.getElementById('mm');
+      const elS = document.getElementById('ss');
+      if (elD) elD.textContent = two(d);
+      if (elH) elH.textContent = two(h);
+      if (elM) elM.textContent = two(m);
+      if (elS) elS.textContent = two(s);
+    } else if (now >= inicio && now <= fim){
+      box.style.display = 'none';
+      if (msg){ msg.textContent = 'Hoje é o grande dia! 👑'; }
+    } else {
+      box.style.display = 'none';
+      if (msg){ msg.textContent = 'A festa aconteceu em 26/07/2026. Obrigada por fazer parte!'; }
+    }
+  }
+  function startCountdown(){
+    renderCountdown();
+    setInterval(renderCountdown, 1000);
+  }
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', startCountdown);
+  } else {
+    startCountdown();
+  }
+  // ====== Sugestão de Presente (PIX + valor sugerido) ======
+  let valor = 100; // valor inicial (o convidado pode ajustar nos botões se você quiser adicionar)
+  const minValor = 10; // mínimo mais flexível
+  function formatBR(n){
+    return n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+  function atualizarValor(){
+    const span = document.getElementById('valorExibido');
+    if (span) span.textContent = 'R$ ' + formatBR(valor);
+  }
+  function ajustarValor(delta){
+    valor = Math.max(minValor, valor + delta);
+    atualizarValor();
+  }
+  function copiarPix(){
+    const chave = document.getElementById('pix').textContent.trim();
+    navigator.clipboard.writeText(chave).then(()=>{
+      alert('Chave PIX copiada: ' + chave + '\n\nAbra seu app do banco, cole a chave e conclua o PIX.');
+    }).catch(()=>{
+      prompt('Copie a chave PIX:', chave);
+    });
+  }
+  function confirmarSugestao(){
+    const chave = document.getElementById('pix').textContent.trim();
+    navigator.clipboard.writeText(chave).then(()=>{
+      alert(`Chave PIX copiada: ${chave}\n\nDefina no seu banco o valor que desejar e finalize o PIX.`);
+    }).catch(()=>{
+      prompt('Copie a chave PIX:', chave);
+    });
+  }
+  // inicializa a exibição do valor (caso use os controles de valor)
+  atualizarValor();
+</script>
+</body>
+</html>
