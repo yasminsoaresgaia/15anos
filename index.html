@@ -313,24 +313,134 @@ A Yasmin está realizando um grande sonho. Em vez de presentes tradicionais, se 
 
 <p style="font-size:14px;color:#666">
   Sua confirmação é muito importante para organização do evento 💖
-</p></section>
-<!-- Galeria -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>15 Anos • Yasmin Soares Gaia</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#F9F3EA;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  max-width:1100px;
+  margin:40px auto;
+}
+
+/* TÍTULO */
+h2{
+  color:#D11E2D;
+}
+
+/* LINHA */
+.divider{
+  height:2px;
+  background:linear-gradient(90deg,transparent,#C8A96A,transparent);
+  border:none;
+  margin:10px 0 20px;
+}
+
+/* ✅ GALERIA MINIATURA */
+.galeria-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap:10px;
+}
+
+.galeria-grid img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.galeria-grid img:hover{
+  transform:scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width:600px){
+  .galeria-grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+/* ✅ LIGHTBOX */
+#lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+#lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- GALERIA -->
 <section class="card" id="galeria">
-<h2>Confira as fotos do ensaio da Yasmin:</h2>
-<hr class="divider"/>
+  <h2>Confira as fotos do ensaio da Yasmin:</h2>
+  <hr class="divider"/>
 
-<div class="galeria-grid">
+  <div class="galeria-grid">
 
-  <img src="./ya1.jpeg" onclick="abrirLightbox(this)">
-  <img src="./ya2.jpeg" onclick="abrirLightbox(this)">
-  <img src="./ya3.jpeg" onclick="abrirLightbox(this)">
-  <img src="./ya4.jpeg" onclick="abrirLightbox(this)">
-  <img src="./ya5.jpeg" onclick="abrirLightbox(this)">
-  <img src="./ya6.jpeg" onclick="abrirLightbox(this)">
-  <img src="./ya7.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya1.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya2.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya3.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya4.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya5.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya6.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya7.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya8.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya9.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya10.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya11.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya12.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya13.jpeg" onclick="abrirLightbox(this)">
+    <img src="./ya14.jpeg" onclick="abrirLightbox(this)">
 
-</main>
-<footer>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="fecharLightbox()">
+  <img id="lightboxImg">
+</div>
+
+<script>
+function abrirLightbox(img){
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightboxImg").src = img.src;
+}
+
+function fecharLightbox(){
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
 <p>Com carinho, família Soares • © 2026</p>
 </footer>
 <script>
